@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Memorial - RipBook</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><i class="fas fa-book-heart"></i> RipBook</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="create-memorial.html">Create Memorial</a>
+                <a href="pricing.html">Pricing</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="create-memorial">
+        <div class="container">
+            <h1>Create a Beautiful Memorial</h1>
+            <p class="subtitle">Fill in the details to create a tribute page for your loved one.</p>
+            
+            <div class="memorial-form">
+                <!-- Simple form - thinking about what people need -->
+                <div class="form-section">
+                    <h2><i class="fas fa-user"></i> About Your Loved One</h2>
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" placeholder="Enter their full name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="birthdate">Birth Date</label>
+                            <input type="date" id="birthdate">
+                        </div>
+                        <div class="form-group">
+                            <label for="passingdate">Date of Passing</label>
+                            <input type="date" id="passingdate">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2><i class="fas fa-image"></i> Photos & Memories</h2>
+                    <div class="form-group">
+                        <label>Upload Photos</label>
+                        <div class="upload-area" id="uploadArea">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Click to upload photos (up to 10)</p>
+                            <input type="file" id="photoUpload" multiple accept="image/*" hidden>
+                        </div>
+                        <div id="photoPreview"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="story">Their Story</label>
+                        <textarea id="story" rows="5" placeholder="Share their life story, memories, or special moments..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2><i class="fas fa-palette"></i> Memorial Style</h2>
+                    <div class="theme-options">
+                        <div class="theme-option" data-theme="serene">
+                            <div class="theme-preview serene"></div>
+                            <p>Serene</p>
+                        </div>
+                        <div class="theme-option" data-theme="celebratory">
+                            <div class="theme-preview celebratory"></div>
+                            <p>Celebratory</p>
+                        </div>
+                        <div class="theme-option" data-theme="classic">
+                            <div class="theme-preview classic"></div>
+                            <p>Classic</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2><i class="fas fa-gift"></i> Birthday Reminders</h2>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="birthdayReminder" checked>
+                        <label for="birthdayReminder">Send me annual birthday remembrance reminders</label>
+                    </div>
+                    <p class="help-text">We'll email you a week before their birthday so you can visit their memorial.</p>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn-secondary">Preview</button>
+                    <button class="btn-primary" id="continueToPayment">Continue to Payment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 RipBook.com - Creating spaces for remembrance</p>
+        </div>
+    </footer>
+
+    <script src="js/memorial-editor.js"></script>
+</body>
+</html>
